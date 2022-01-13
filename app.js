@@ -3,7 +3,6 @@ const app =  express();
 const path = require('path');
 const cors = require('cors');
 const jwt = require('jsonwebtoken');
-const bodyParser = require('body-parser');
 // const path = require('path');
 
 // app.use(express.static('./dist/FrontEnd'));
