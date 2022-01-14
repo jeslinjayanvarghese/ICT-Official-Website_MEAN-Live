@@ -7,12 +7,12 @@ const jwt = require('jsonwebtoken');
 
 // app.use(express.static('./dist/FrontEnd'));
 
-const port = process.env.PORT || 3000;
-
+var port = process.env.PORT || 3000;
+app.use(express.static('./dist/FrontEnd'));
 
 app.use(express.urlencoded({ extended: true })); //middleware portion for adding data
 app.use(cors());
-app.use(express.static('./dist/FrontEnd'));
+
 
 app.use(express.json());
 app.use(express.static(__dirname + '/public'));
@@ -171,11 +171,11 @@ app.use('/api/todo',Todos)
 //   res.sendFile(path.join(__dirname + '/dist//FrontEnd/index.html'))
 //  });
 
-
-
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname +'/dist/FrontEnd/index.html'))
-})
+  res.sendFile(path.join(__dirname + '/dist/FrontEnd//index.html'));
+});
+
+
 
 // port listening to starts here//
 app.listen(port, () => {
