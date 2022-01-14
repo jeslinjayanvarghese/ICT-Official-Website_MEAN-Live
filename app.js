@@ -48,10 +48,9 @@ app.use('/api/industry',industrypartnerRouter)
 // Route for Industrial partners ends here
 
 // Partner application form route starts here
-const partnerformRouter = require('./src/routes/Routes/partnerForm');
+const partnerformRouter = require('./src/routes/Routes/partnerform');
 app.use('/api/PartnershipApplication', partnerformRouter);
 // Partner application form starts route here
-
 // corporate application form routestarts here
 const corporateformRouter = require('./src/routes/Routes/corporateform');
 app.use('/api/CorporateApplication', corporateformRouter);
